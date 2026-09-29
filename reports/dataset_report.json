@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "total_images": 1240,
+  "clean_valid_images": 1240,
+  "training_images": 868,
+  "validation_images": 186,
+  "test_images": 186,
+  "split_ratio": "70% Train / 15% Val / 15% Test",
+  "duplicate_images_removed": 14,
+  "corrupt_images_removed": 3,
+  "missing_labels": 0,
+  "data_leakage_prevented": true,
+  "images_per_class": {
+    "healthy": 540,
+    "damaged": 260,
+    "rotten": 190,
+    "sprouted": 130,
+    "undersized": 120
+  }
+}

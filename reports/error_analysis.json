@@ -1,0 +1,43 @@
+{
+  "total_errors_analyzed": 15,
+  "error_categories": [
+    {
+      "category": "False Onion (Non-Onion Misclassified)",
+      "count": 3,
+      "example_cases": [
+        "Red round potatoes under warm yellow light",
+        "Single whole unpeeled garlic bulb"
+      ],
+      "root_cause": "Visual color & round contour similarity to red onions",
+      "action_taken": "Added 50 extra red potato & garlic hard negatives to training set"
+    },
+    {
+      "category": "Missed Onion (False Negative)",
+      "count": 6,
+      "example_cases": [
+        "Onion partially covered by soil in field",
+        "Extremely dim shadow lighting"
+      ],
+      "root_cause": "Extreme low illumination and heavy soil occlusion",
+      "action_taken": "Added brightness augmentation & low-contrast training samples"
+    },
+    {
+      "category": "Wrong Defect Classification",
+      "count": 4,
+      "example_cases": [
+        "Early neck rot confused with mechanical cut"
+      ],
+      "root_cause": "Fungal spot texture overlap",
+      "action_taken": "Fine-tuned classifier head on neck rot subset"
+    },
+    {
+      "category": "Low Confidence Warning Triggered",
+      "count": 2,
+      "example_cases": [
+        "Out of focus blur photo"
+      ],
+      "root_cause": "Motion blur during phone capture",
+      "action_taken": "Triggered stage 1 image clarity alert view"
+    }
+  ]
+}
